@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<launchConfiguration type="org.eclipse.jdt.launching.localJavaApplication">
+<listAttribute key="org.eclipse.debug.core.MAPPED_RESOURCE_PATHS">
+<listEntry value="/com.mashery.tools.httpconcurrentclient/src/com/mashery/tools/httpconcurrentclient/ProxyConcurrentHttpLoadTester.java"/>
+</listAttribute>
+<listAttribute key="org.eclipse.debug.core.MAPPED_RESOURCE_TYPES">
+<listEntry value="1"/>
+</listAttribute>
+<listAttribute key="org.eclipse.debug.ui.favoriteGroups">
+<listEntry value="org.eclipse.debug.ui.launchGroup.debug"/>
+<listEntry value="org.eclipse.debug.ui.launchGroup.run"/>
+</listAttribute>
+<booleanAttribute key="org.eclipse.jdt.launching.ATTR_USE_START_ON_FIRST_THREAD" value="true"/>
+<stringAttribute key="org.eclipse.jdt.launching.MAIN_TYPE" value="com.mashery.tools.httpconcurrentclient.ProxyConcurrentHttpLoadTester"/>
+<stringAttribute key="org.eclipse.jdt.launching.PROGRAM_ARGUMENTS" value="-n 2 -u &quot;http://localhost:8080/long?api_key=h6qx62w84w4dvbcnkcj4j6fn&quot; -w 0 -h &quot;Host: localapi.localproxy.example.com&quot; -b 1 -D 0 -R POST -S 10"/>
+<stringAttribute key="org.eclipse.jdt.launching.PROJECT_ATTR" value="com.mashery.tools.httpconcurrentclient"/>
+<stringAttribute key="org.eclipse.jdt.launching.VM_ARGUMENTS" value="-Xms256m -Xmx2000m -Djava.util.logging.config.file=log4j.properties"/>
+</launchConfiguration>

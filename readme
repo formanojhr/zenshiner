@@ -1,0 +1,48 @@
+Author: Manoj Ramakrishnan (mramakrishnan@mashery.com)
+
+This project's objective is to contain tools that could stress test any HttpServer with ConcurrentHttpRequests in a non blocking way and responses are captured
+as they come back.
+
+The class is designed to do this:
+ProxyConcurrentHttpLoadTester
+
+Accordingly possible responses are as below:
+java -jar myprogram.jar [options...] arguments...
+ -h VAL : Comma separated header values. E.g: "Host": "localapi.localproxy.examp
+          le.com","Content-Type": "application/x-zip"
+ -n N   : The number of concurrent http clients to be run
+ -u VAL : server URI the tool client should hit
+ -w N   : Wait time between the requests in millisecs
+
+SAMPLE Request call with java command:
+======================================
+	
+mramakr1-mac01:bin mramakr1$ java -cp /Users/mramakr1/IdeaProjects/MyStuff/out/artifacts/com_mashery_tools_jar/com.mashery.tools.jar ProxyConcurrentHttpLoadTester -n 1 -u "http://localhost:8080/wwo.php?delay=25&api_key=testdevcustomerkey" -w 0 -h "Host:localapi.localproxy.example.com,Content-Type:application/x-zip"
+Starting concurrent requests to proxy with URI:http://localhost:8080/wwo.php?delay=25&api_key=testdevcustomerkey
+Submitted Request: 0
+
+
+Another example with time duration of test hitting a mashpud environment
+========================================================================
+
+java -cp /Users/mramakr1/IdeaProjects/manoj/target/artifacts/com_mashery_tools_jar/com.mashery.tools.jar ProxyConcurrentHttpLoadTester -n 30 -u "http://zwei.mashspud.com-j.zwei.mashspud.com/testLatentBackend/latency?response_size_index=6&min_response_time=15000&api_key=manojperformance" -w 0 -h "Host:localapi.localproxy.example.com" -t 0 -b 1 -D 5
+
+RESPONSE:
+
+2013/10/16 11:04:09   Got response: GET no.:  0 { "data": { "ClimateAverages": [ { "month": [ {"absMaxTemp": "16.5",
+"absMaxTemp_F": "61.7", "avgMinTemp": "4.7", "avgMinTemp_F": "40.5", "index": "1", "name": "January" }, {"absMaxTemp": "19.4",
+ "absMaxTemp_F": "66.9", "avgMinTemp": "4.6", "avgMinTemp_F": "40.3", "index": "2", "name": "February" }, {"absMaxTemp": "23.1", "absMaxTemp_F": "73.6", "avgMinTemp": "5.7", "avgMinTemp_F": "42.3", "index": "
+
+
+
+Building jar with the project:
+Since I used intellij to build the project, follow the steps below to generated a new jar with any code change:
+
+1. Click Build Menu -> Click Build Artifacts
+2. From the options click Clean
+3. Do step 1 again and click Rebuild.
+
+ For adding dependencies:
+ Use maven pom.xml  under root of the project.
+
+

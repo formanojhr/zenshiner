@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <artifactId>concurrenthttpclient</artifactId>
+    <groupId>com.mashery.tools.concurenthttpclient</groupId>
+    <packaging>jar</packaging>
+    <version>1.0.0</version>
+    <name>com.mashery.tools.httpconcurrentclient</name>
+    
+    <properties>
+		<jdk.version>1.6</jdk.version>
+		<jodatime.version>2.5</jodatime.version>
+		<junit.version>4.8.1</junit.version>
+	</properties>
+
+	<dependencies>
+		<dependency>
+			<groupId>org.apache.httpcomponents</groupId>
+			<artifactId>httpclient</artifactId>
+			<version>4.0</version>
+			<scope>compile</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>log4j</groupId>
+			<artifactId>log4j</artifactId>
+			<version>1.2.17</version>
+		</dependency>
+
+		<dependency>
+			<groupId>args4j</groupId>
+			<artifactId>args4j</artifactId>
+			<version>2.0.15</version>
+			<scope>compile</scope>
+		</dependency>
+        
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>${junit.version}</version>
+			<scope>test</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-math</artifactId>
+            <version>2.0</version>
+            <scope>compile</scope>
+        </dependency>
+
+    </dependencies>
+
+	<build>
+
+	<sourceDirectory>src</sourceDirectory>
+	<!-- name of the jar file -->
+	<finalName>concurrenthttpclient</finalName>
+	<plugins>
+			<!-- download source code in Eclipse, best practice -->
+
+	<!-- Set a compiler level -->
+	<plugin>
+		<groupId>org.apache.maven.plugins</groupId>
+		<artifactId>maven-compiler-plugin</artifactId>
+		<version>2.3.2</version>
+		<configuration>
+			<source>${jdk.version}</source>
+			<target>${jdk.version}</target>
+		</configuration>
+	</plugin>
+
+	<!-- Maven Assembly Plugin -->
+	<plugin>
+	<groupId>org.apache.maven.plugins</groupId>
+	<artifactId>maven-jar-plugin</artifactId>
+
+			<configuration>
+				<!-- get all project dependencies -->
+
+				<descriptorRefs>
+					<descriptorRef>jar-with-dependencies</descriptorRef>
+				</descriptorRefs>
+				<manifestEntries>
+					<Class-Path>.</Class-Path>
+				</manifestEntries>
+				<!-- MainClass in manifest make a executable jar -->
+				<archive>
+					<manifest>
+						<mainClass>com.mashery.tools.httpconcurrentclient.ProxyConcurrentHttpLoadTester</mainClass>
+					</manifest>
+				</archive>
+
+			</configuration>
+			<executions>
+			<execution>
+	
+			<id>make-assembly</id>
+			<!-- bind to the packaging phase -->
+			<phase>package</phase>
+			
+		</execution>
+	</executions>
+	</plugin>
+
+		</plugins>
+	</build>
+
+</project>

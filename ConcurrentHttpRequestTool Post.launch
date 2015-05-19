@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<launchConfiguration type="org.eclipse.jdt.launching.localJavaApplication">
+<listAttribute key="org.eclipse.debug.core.MAPPED_RESOURCE_PATHS">
+<listEntry value="/com.mashery.tools.httpconcurrentclient/src/com/mashery/tools/httpconcurrentclient/ProxyConcurrentHttpLoadTester.java"/>
+</listAttribute>
+<listAttribute key="org.eclipse.debug.core.MAPPED_RESOURCE_TYPES">
+<listEntry value="1"/>
+</listAttribute>
+<listAttribute key="org.eclipse.debug.ui.favoriteGroups">
+<listEntry value="org.eclipse.debug.ui.launchGroup.run"/>
+</listAttribute>
+<booleanAttribute key="org.eclipse.jdt.launching.ATTR_USE_START_ON_FIRST_THREAD" value="true"/>
+<stringAttribute key="org.eclipse.jdt.launching.MAIN_TYPE" value="com.mashery.tools.httpconcurrentclient.ProxyConcurrentHttpLoadTester"/>
+<stringAttribute key="org.eclipse.jdt.launching.PROGRAM_ARGUMENTS" value="-n 1 -u &quot;https://10.10.200.75:8083/v2/json-rpc/&quot; -w 0 -b 1 -D 0 -R POST -S 10 -B &quot;{&quot;id&quot;:1,&quot;method&quot;:&quot;oauth2.createAccessToken&quot;,&quot;params&quot;:{&quot;service_key&quot;:&quot;m9f5kyzfjjrssz6d5sfkbuw3&quot;,&quot;client&quot;:{&quot;client_id&quot;:&quot;yq7chp6ufkeea587gp6wqa6x&quot;,&quot;client_secret&quot;:&quot;Azn4Xa&quot;},&quot;token_data&quot;:{&quot;grant_type&quot;:&quot;client_credentials&quot;},&quot;uri&quot;:{&quot;redirect_uri&quot;:&quot;https://some.com/cb&quot;},&quot;user_context&quot;:null},&quot;jsonrpc&quot;:&quot;2.0&quot;}&quot; -h \&quot;Content-Type\&quot;: \&quot;application/json\&quot;, \&quot;Authorization\&quot;: \&quot;Basic cm9vdDpjaGFuZ2VtZQ==\&quot;&quot;"/>
+<stringAttribute key="org.eclipse.jdt.launching.PROJECT_ATTR" value="com.mashery.tools.httpconcurrentclient"/>
+<stringAttribute key="org.eclipse.jdt.launching.VM_ARGUMENTS" value="-Xms256m -Xmx2000m -Djava.util.logging.config.file=log4j.properties"/>
+</launchConfiguration>
