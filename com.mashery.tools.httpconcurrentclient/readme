@@ -18,7 +18,7 @@ SAMPLE Request call with java command:
 ======================================
 	
 mramakr1-mac01:bin mramakr1$ java -cp /Users/mramakr1/IdeaProjects/MyStuff/out/artifacts/com_mashery_tools_jar/com.mashery.tools.jar ProxyConcurrentHttpLoadTester -n 1 -u "http://localhost:8080/wwo.php?delay=25&api_key=testdevcustomerkey" -w 0 -h "Host:localapi.localproxy.example.com,Content-Type:application/x-zip"
-Starting concurrent requests to proxy with URI:http://localhost:8080/wwo.php?delay=25&api_key=testdevcustomerkey
+Starting concurrent requests to proxy with URI:http://localhost:8080/wwo.php?delay=25
 Submitted Request: 0
 
 
